@@ -1,0 +1,132 @@
+/* General container style */
+.container {
+    text-align: center;
+    padding: 20px;
+    background-color: #1f3540;
+    /* Background color for the page */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    /* Consistent spacing between elements */
+}
+
+/* Title style */
+.title {
+    color: white;
+    font-size: 3rem;
+    font-family: 'Arial', sans-serif;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Reset button style */
+.reset {
+    width: 250px;
+    height: 60px;
+    border: none;
+    outline: none;
+    display: flex;
+    /* Center content */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 30px;
+    background: #26ffcb;
+    font-size: 1.5rem;
+    color: #1f3540;
+    margin-top: 20px;
+    /* Consistent spacing below the board */
+    transition: background 0.3s ease;
+}
+
+/* Hover effect for the reset button */
+.reset:hover {
+    background: #1f3540;
+    color: #26ffcb;
+}
+
+/* Styling the board and the grid layout */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    width: 90%;
+    max-width: 500px;
+}
+
+/* Each individual box in the grid */
+.boxes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    background: #0f1b21;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-bottom: 7px;
+    transition: background 0.3s ease;
+}
+
+/* Hover effect for the game boxes */
+.boxes:hover {
+    background: #395665;
+}
+
+/* Style for the images inside the boxes */
+.boxes img {
+    width: 100px;
+    height: 100px;
+}
+
+/* Making the page responsive */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.5rem;
+        /* Smaller font size for the title on mobile */
+    }
+
+    .board {
+        max-width: 400px;
+    }
+
+    .boxes {
+        height: 120px;
+    }
+
+    .reset {
+        width: 200px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 2rem;
+        /* Even smaller font size for very small screens */
+    }
+
+    .board {
+        max-width: 350px;
+    }
+
+    .boxes {
+        height: 100px;
+    }
+
+    .reset {
+        width: 180px;
+        height: 45px;
+        font-size: 1rem;
+    }
+
+    .boxes img {
+        width: 70px;
+        height: 70px;
+    }
+}
