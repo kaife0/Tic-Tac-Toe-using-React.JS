@@ -11,7 +11,7 @@ const TicTacToe = () => {
   const toggle = (e, num) => {
     if (lock) {
       return;
-    }
+    } 
     if (data[num] !== '') {
       return; // Do nothing if the cell is already filled
     }
